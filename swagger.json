@@ -1,0 +1,41 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Weather Telegram Bot API",
+      "version": "1.0.0",
+      "description": "API documentation for the weather Telegram bot and REST API"
+    },
+    "paths": {
+      "/logs": {
+        "get": {
+          "summary": "Get all logs",
+          "description": "Retrieve the history of all weather requests",
+          "responses": {
+            "200": {
+              "description": "A list of weather logs"
+            }
+          }
+        }
+      },
+      "/logs/{user_id}": {
+        "get": {
+          "summary": "Get logs by user ID",
+          "description": "Retrieve weather request history for a specific user",
+          "parameters": [
+            {
+              "name": "user_id",
+              "in": "path",
+              "required": true,
+              "type": "integer"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Logs for a specific user"
+            }
+          }
+        }
+      }
+    }
+  }
+  
